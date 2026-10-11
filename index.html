@@ -1,61 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f8f7f3" />
-  <meta name="description" content="Academic website of [Full Name] — mathematics, research, teaching, and notes." />
-  <title>[Full Name] | Mathematics</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/site.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal academic website in mathematics">
+  <title>[Your Name] | Mathematics</title>
+  <style>
+    /* SIMPLE STYLE: change colors here if you want. */
+    :root { --ink:#24303c; --muted:#5e6875; --accent:#184e77; --line:#dfe5e9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#fff; color:var(--ink); font-family:Georgia,"Times New Roman",serif; font-size:17px; line-height:1.7; }
+    main { max-width:830px; margin:0 auto; padding:64px 28px 90px; }
+    h1 { font-size:2.35rem; line-height:1.22; font-weight:normal; letter-spacing:-.025em; margin:0 0 10px; }
+    h2 { font-size:1.36rem; font-weight:normal; padding-bottom:7px; margin:42px 0 15px; border-bottom:1px solid var(--line); }
+    p { margin:12px 0; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .intro { color:var(--muted); margin-top:0; }
+    .top { border-bottom:2px solid var(--accent); padding-bottom:27px; }
+    .links { margin-top:17px; display:flex; flex-wrap:wrap; gap:8px 21px; font-size:16px; }
+    .small { color:var(--muted); font-size:15px; }
+    ul { margin:10px 0; padding-left:24px; }
+    li { padding-left:3px; margin:7px 0; }
+    footer { margin-top:55px; padding-top:17px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    @media(max-width:600px) { main { padding:34px 20px 60px; } h1 { font-size:1.9rem; } body { font-size:16px; } }
+  </style>
 </head>
 <body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="wordmark" href="#home">[Full Name]<span class="wordmark-dot">.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">Menu <span aria-hidden="true">☰</span></button>
-      <nav id="main-nav" class="nav" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#notes">Notes</a><a href="#contact">Contact</a>
-        <a class="nav-cv" href="assets/cv-placeholder.html">CV <span aria-hidden="true">↗</span></a>
+  <main>
+    <!-- EDIT THIS FIRST: your name, status, university, email, and CV. -->
+    <header class="top">
+      <h1>[Your Full Name]</h1>
+      <p class="intro">[Your academic status] · [Your University]</p>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <nav class="links" aria-label="Page links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#notes">Notes</a>
+        <!-- Upload your PDF to your repository and rename the link below to match it. -->
+        <a href="cv.pdf">CV (PDF) ↗</a>
       </nav>
     </header>
 
-    <main id="home">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-text">
-          <p class="eyebrow"><span class="tiny-line"></span> MATHEMATICS · ACADEMIC WEBSITE</p>
-          <h1 id="hero-title">Hello, I'm<br><em>Hsin Yen, Ho</em><span class="accent">.</span></h1>
-          <p class="hero-lead">I am a mathematics student interested in algebraic number theory and automorphic forms.</p>
-          <p class="hero-detail">Exploring the connections between number theory, automorphic representations, and arithmetic.</p>
-          <div class="hero-actions"><a class="button-primary" href="#research">Explore my interests <span aria-hidden="true">↗</span></a><a class="text-link" href="assets/cv-placeholder.html">View CV <span aria-hidden="true">↗</span></a></div>
-        </div>
-        <div class="hero-art" aria-hidden="true"><div class="art-top">NOTES ON MATHEMATICS <span>01 / ∞</span></div><div class="math-symbol">ℒ<span>(s, π)</span></div><div class="art-rule"></div><div class="art-equation">∑ aₙ / nˢ</div><div class="art-bottom">Patterns, structures, connections.</div></div>
-      </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>I am a mathematics student interested in algebraic number theory and automorphic forms. My interests also include connections with Iwasawa theory and the Langlands program.</p>
+      <p class="small">[Add one or two sentences about your current degree and academic background.]</p>
+    </section>
 
-      <div class="main-content">
-        <section id="about" class="content-section two-col">
-          <div class="section-intro"><p class="eyebrow">01 — INTRODUCTION</p><h2>About me<span class="accent">.</span></h2></div>
-          <div class="section-body"><p class="prose-large">I am currently <strong>[your academic status]</strong> at <strong>[your university]</strong>, with a broad interest in modern number theory.</p><p>My mathematical interests center on algebraic number theory and automorphic forms. I am especially interested in how ideas from representation theory and arithmetic interact, including themes in Iwasawa theory and the Langlands program.</p><p>Outside of research, I enjoy discussing mathematics with peers, participating in seminars, and explaining mathematical ideas to students.</p><p class="subtle-note">[Replace this introduction with your confirmed academic background.]</p></div>
-        </section>
-        <section id="research" class="content-section two-col">
-          <div class="section-intro"><p class="eyebrow">02 — MATHEMATICS</p><h2>Research<br>interests<span class="accent">.</span></h2></div>
-          <div class="section-body"><p>My primary interests lie in the arithmetic and analytic aspects of number theory, particularly in the following areas.</p><div class="interest-list"><article class="interest"><span class="interest-number">01</span><div><h3>Algebraic Number Theory</h3><p>Arithmetic structures, number fields, and the interaction of local and global methods.</p></div><span class="interest-arrow" aria-hidden="true">↗</span></article><article class="interest"><span class="interest-number">02</span><div><h3>Automorphic Forms</h3><p>Automorphic representations, Eisenstein series, and related questions in the theory of L-functions.</p></div><span class="interest-arrow" aria-hidden="true">↗</span></article><article class="interest"><span class="interest-number">03</span><div><h3>Iwasawa Theory & the Langlands Program</h3><p>Connections among p-adic arithmetic, Galois representations, and automorphic phenomena.</p></div><span class="interest-arrow" aria-hidden="true">↗</span></article></div><div class="placeholder-panel"><h3>Research projects & writing</h3><p>[Add confirmed research projects, thesis details, preprints, or presentations here. Do not list work as published unless it is published.]</p></div></div>
-        </section>
-        <section id="teaching" class="content-section two-col">
-          <div class="section-intro"><p class="eyebrow">03 — EXPERIENCE</p><h2>Teaching<span class="accent">.</span></h2></div>
-          <div class="section-body"><p>I value clear explanations and collaborative learning, whether in the classroom or a student-led seminar.</p><div class="experience"><div><span class="experience-type">TEACHING ASSISTANT</span><h3>[Course Title]</h3><p>[University] · [Semester / Year]</p></div><span class="experience-badge">TA</span></div><div class="experience"><div><span class="experience-type">OUTREACH / MATHEMATICS COMMUNICATION</span><h3>[Activity or Program]</h3><p>[Description and date]</p></div><span class="experience-badge">↗</span></div></div>
-        </section>
-        <section id="notes" class="content-section two-col">
-          <div class="section-intro"><p class="eyebrow">04 — WRITING</p><h2>Notes &<br>exposition<span class="accent">.</span></h2></div>
-          <div class="section-body"><p>A space for seminar notes, expository writing, and mathematical ideas in progress.</p><div class="empty-notes"><span aria-hidden="true">✳</span><div><h3>Notes coming soon</h3><p>[Add PDF notes or links to mathematical writing when ready.]</p></div></div></div>
-        </section>
-        <section id="contact" class="contact-section"><p class="eyebrow">05 — GET IN TOUCH</p><h2>Let's talk<br><em>mathematics.</em></h2><p>I'm happy to connect with people who share an interest in mathematics.</p><a class="contact-link" href="mailto:R14221012@ntu.edu.tw">[R14221012@ntu.edu.tw] <span aria-hidden="true">↗</span></a><p class="subtle-note">[Replace this placeholder email before publishing.]</p></section>
-      </div>
-    </main>
-    <footer class="footer"><span>© <span id="year">2026</span> [Full Name]</span><span>Built for curiosity and mathematics.</span><a href="#home">Back to top ↑</a></footer>
-  </div>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <p>Algebraic number theory, automorphic forms and representations, Eisenstein series, Iwasawa theory, and the Langlands program.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Research Experience</h2>
+      <ul>
+        <li><strong>[Project or thesis title]</strong> — [Supervisor / institution, if applicable].<br><span class="small">[A short description of what you studied or worked on. Only list confirmed work.]</span></li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul>
+        <li><strong>[Course title]</strong>, Teaching Assistant, [University], [Term].</li>
+      </ul>
+    </section>
+
+    <section id="notes">
+      <h2>Notes and Talks</h2>
+      <p class="small">[Add seminar slides, mathematical notes, or talks here when available.]</p>
+      <!-- EXAMPLE: <p><a href="notes/example.pdf">My seminar notes (PDF)</a></p> -->
+    </section>
+
+    <footer>Last updated: [Month Year]</footer>
+  </main>
 </body>
 </html>
